@@ -1,0 +1,1204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QUEM Systems International - Turning Software Systems into Intelligent Systems</title>
+    <meta name="description" content="QUEM Systems International - Expert in AI Product Engineering, MLOps, LLMOps, DevOps, and Software Architecture. Building intelligent, scalable, and maintainable systems.">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Calendly CSS -->
+    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+    
+    <!-- Custom styles -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #072433 0%, #4DA2A9 100%);
+        }
+        
+        .text-gradient {
+            background: linear-gradient(135deg, #4DA2A9 0%, #072433 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .brand-teal {
+            color: #4DA2A9;
+        }
+        
+        .brand-teal-bg {
+            background-color: #4DA2A9;
+        }
+        
+        .brand-dark {
+            background-color: #072433;
+        }
+        
+        .hover-brand-teal:hover {
+            color: #4DA2A9;
+        }
+        
+        .hover-lift {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .hover-lift:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .section-padding {
+            padding: 5rem 0;
+        }
+        
+        @media (max-width: 768px) {
+            .section-padding {
+                padding: 3rem 0;
+            }
+        }
+        
+        @keyframes pendulum {
+            0%, 100% {
+                transform: rotate(-15deg);
+            }
+            50% {
+                transform: rotate(15deg);
+            }
+        }
+        
+        .spinning-logo {
+            animation: pendulum 3s ease-in-out infinite;
+            filter: drop-shadow(0 0 20px rgba(77, 162, 169, 0.3));
+            transform-origin: center top;
+        }
+        
+        .spinning-logo:hover {
+            animation: pendulum 1.5s ease-in-out infinite;
+        }
+        
+        /* Enhanced Visual Elements */
+        .pattern-dots {
+            background-image: radial-gradient(circle, rgba(77, 162, 169, 0.1) 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+        
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .fade-in-up {
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #4DA2A9 0%, #3B8A91 100%);
+            color: white;
+            padding: 0.875rem 2rem;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(77, 162, 169, 0.3);
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(77, 162, 169, 0.4);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            padding: 0.875rem 2rem;
+            border: 2px solid white;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .btn-secondary:hover {
+            background: white;
+            color: #4DA2A9;
+            transform: translateY(-2px);
+        }
+        
+        .stat-card {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .stat-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, #4DA2A9, #6BB8C0);
+        }
+        
+        .tech-badge {
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            border: 1px solid #cbd5e1;
+            transition: all 0.3s ease;
+        }
+        
+        .tech-badge:hover {
+            background: linear-gradient(135deg, #4DA2A9 0%, #3B8A91 100%);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(77, 162, 169, 0.3);
+        }
+        
+        .section-divider {
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #4DA2A9, transparent);
+            margin: 4rem auto;
+            max-width: 200px;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900">
+    
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md fixed w-full top-0 z-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center space-x-3">
+                    <a href="#home" class="flex items-center space-x-3">
+                        <img src="logoandcertificate/FullLogo_Transparent_NoBuffer.png" alt="QUEM Systems International Logo" class="h-10 md:h-12 object-contain">
+                        <span class="text-xl md:text-2xl font-bold text-gray-900 hidden sm:block">QUEM Systems International</span>
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="text-gray-700 hover-brand-teal transition">Home</a>
+                    <a href="#about" class="text-gray-700 hover-brand-teal transition">About</a>
+                    <a href="#services" class="text-gray-700 hover-brand-teal transition">Services</a>
+                    <a href="projects.html" class="text-gray-700 hover-brand-teal transition">Projects</a>
+                    <a href="team.html" class="text-gray-700 hover-brand-teal transition">Team</a>
+                    <a href="#contact" class="text-gray-700 hover-brand-teal transition">Contact</a>
+                    <button onclick="openCalendly()" class="brand-teal-bg text-white px-4 py-2 rounded-lg font-semibold hover:opacity-90 transition">
+                        Book Consultation
+                    </button>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-700 hover-brand-teal">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="px-4 pt-2 pb-3 space-y-1">
+                <a href="#home" class="block px-3 py-2 text-gray-700 hover:bg-gray-100 rounded">Home</a>
+                <a href="#about" class="block px-3 py-2 text-gray-700 hover:bg-gray-100 rounded">About</a>
+                <a href="#services" class="block px-3 py-2 text-gray-700 hover:bg-gray-100 rounded">Services</a>
+                <a href="projects.html" class="block px-3 py-2 text-gray-700 hover:bg-gray-100 rounded">Projects</a>
+                <a href="team.html" class="block px-3 py-2 text-gray-700 hover:bg-gray-100 rounded">Team</a>
+                <a href="#contact" class="block px-3 py-2 text-gray-700 hover:bg-gray-100 rounded">Contact</a>
+                <button onclick="openCalendly()" class="w-full text-left brand-teal-bg text-white px-3 py-2 rounded font-semibold hover:opacity-90 transition">
+                    Book Consultation
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="gradient-bg text-white section-padding mt-16">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row items-center gap-8 lg:gap-12 max-w-6xl mx-auto">
+                <!-- Spinning Logo -->
+                <div class="flex-shrink-0">
+                    <img src="logoandcertificate/FullLogo_Transparent_NoBuffer.png" alt="QUEM Systems Logo" class="spinning-logo h-32 md:h-40 lg:h-48 xl:h-56 object-contain">
+                </div>
+                
+                <div class="flex-1 text-center lg:text-left">
+                <div class="inline-block px-4 py-2 bg-white bg-opacity-20 rounded-full text-sm font-semibold mb-4">
+                    🚀 Enterprise IT Services & AI Solutions
+                </div>
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+                    Your Trusted Partner in<br/>
+                    <span style="color: #4DA2A9;">AI-Powered Software Development</span>
+                </h1>
+                <p class="text-xl md:text-2xl mb-6 text-gray-100 font-semibold">
+                    Enterprise-Grade Solutions • 40% Faster Time-to-Market • 100% On-Time Delivery
+                </p>
+                <p class="text-lg md:text-xl mb-10 text-gray-200 lg:max-w-2xl leading-relaxed">
+                    Reduce development costs by 30% while accelerating innovation. We deliver production-ready, intelligent systems backed by 50+ successful projects and zero failed deliveries.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                    <button onclick="openCalendly()" class="btn-primary">
+                        <i class="fas fa-calendar-check mr-2"></i>Get Free Consultation
+                    </button>
+                    <a href="#services" class="btn-secondary">
+                        <i class="fas fa-arrow-right mr-2"></i>View Our Services
+                    </a>
+                </div>
+                <div class="mt-8 flex flex-wrap gap-4 text-sm justify-center lg:justify-start">
+                    <div class="flex items-center text-gray-200">
+                        <i class="fas fa-check-circle brand-teal mr-2"></i>
+                        <span>AWS Certified Partner</span>
+                    </div>
+                    <div class="flex items-center text-gray-200">
+                        <i class="fas fa-check-circle brand-teal mr-2"></i>
+                        <span>14-Day Money-Back Guarantee</span>
+                    </div>
+                    <div class="flex items-center text-gray-200">
+                        <i class="fas fa-check-circle brand-teal mr-2"></i>
+                        <span>NDA & IP Protection</span>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-12 bg-white border-b border-gray-100">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
+                <div class="text-center stat-card p-6 bg-gradient-to-br from-gray-50 to-white rounded-lg">
+                    <div class="text-4xl md:text-5xl font-bold brand-teal mb-2">50+</div>
+                    <div class="text-sm md:text-base text-gray-600 font-medium">Projects Delivered</div>
+                </div>
+                <div class="text-center stat-card p-6 bg-gradient-to-br from-gray-50 to-white rounded-lg">
+                    <div class="text-4xl md:text-5xl font-bold brand-teal mb-2">100%</div>
+                    <div class="text-sm md:text-base text-gray-600 font-medium">On-Time Delivery</div>
+                </div>
+                <div class="text-center stat-card p-6 bg-gradient-to-br from-gray-50 to-white rounded-lg">
+                    <div class="text-4xl md:text-5xl font-bold brand-teal mb-2">10+</div>
+                    <div class="text-sm md:text-base text-gray-600 font-medium">Expert Engineers</div>
+                </div>
+                <div class="text-center stat-card p-6 bg-gradient-to-br from-gray-50 to-white rounded-lg">
+                    <div class="text-4xl md:text-5xl font-bold brand-teal mb-2">5+</div>
+                    <div class="text-sm md:text-base text-gray-600 font-medium">Years Experience</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ROI Banner -->
+    <section class="py-12 bg-gradient-to-br from-gray-900 to-gray-800 text-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">See How Much You Can Save</h2>
+                <p class="text-xl text-gray-300 mb-8">Calculate your potential ROI with our AI & software development services</p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <button onclick="openCalendly()" class="bg-gradient-to-r from-teal-400 to-cyan-500 text-white px-8 py-4 rounded-lg font-bold text-lg hover:shadow-2xl transition transform hover:scale-105">
+                        <i class="fas fa-calculator mr-2"></i>Get Free ROI Assessment
+                    </button>
+                    <a href="projects.html" class="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-gray-900 transition">
+                        <i class="fas fa-folder-open mr-2"></i>View Success Stories
+                    </a>
+                </div>
+                <p class="text-sm text-gray-400 mt-4"><i class="fas fa-lock mr-1"></i> No commitment required • Free 30-minute consultation</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Industries We Serve -->
+    <section class="py-12 bg-gradient-to-r from-teal-500 to-cyan-600 text-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-8">
+                <h3 class="text-2xl md:text-3xl font-bold mb-2">Industries We Serve</h3>
+                <p class="text-teal-100">Specialized expertise across multiple sectors</p>
+            </div>
+            <div class="flex flex-wrap justify-center gap-6 max-w-5xl mx-auto">
+                <div class="bg-white bg-opacity-20 backdrop-blur-sm px-6 py-3 rounded-lg flex items-center gap-3">
+                    <i class="fas fa-heartbeat text-2xl"></i>
+                    <span class="font-semibold">Healthcare</span>
+                </div>
+                <div class="bg-white bg-opacity-20 backdrop-blur-sm px-6 py-3 rounded-lg flex items-center gap-3">
+                    <i class="fas fa-chart-line text-2xl"></i>
+                    <span class="font-semibold">FinTech</span>
+                </div>
+                <div class="bg-white bg-opacity-20 backdrop-blur-sm px-6 py-3 rounded-lg flex items-center gap-3">
+                    <i class="fas fa-shopping-cart text-2xl"></i>
+                    <span class="font-semibold">E-commerce</span>
+                </div>
+                <div class="bg-white bg-opacity-20 backdrop-blur-sm px-6 py-3 rounded-lg flex items-center gap-3">
+                    <i class="fas fa-graduation-cap text-2xl"></i>
+                    <span class="font-semibold">Education</span>
+                </div>
+                <div class="bg-white bg-opacity-20 backdrop-blur-sm px-6 py-3 rounded-lg flex items-center gap-3">
+                    <i class="fas fa-building text-2xl"></i>
+                    <span class="font-semibold">Real Estate</span>
+                </div>
+                <div class="bg-white bg-opacity-20 backdrop-blur-sm px-6 py-3 rounded-lg flex items-center gap-3">
+                    <i class="fas fa-truck text-2xl"></i>
+                    <span class="font-semibold">Logistics</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="py-16 bg-gradient-to-br from-teal-50 to-cyan-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4 text-gray-900">Why Choose QUEM Systems?</h2>
+                <div class="w-24 h-1 mx-auto" style="background: linear-gradient(to right, #4DA2A9, #6BB8C0);"></div>
+                <p class="text-xl text-gray-700 mt-4 max-w-2xl mx-auto">We don't just build software—we deliver measurable business results with ironclad guarantees.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <div class="bg-white p-8 rounded-xl shadow-lg hover-lift text-center">
+                    <div class="w-16 h-16 bg-gradient-to-br from-teal-400 to-teal-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-rocket text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-900">40% Faster Delivery</h3>
+                    <p class="text-gray-600">Our agile methodology and AI-assisted development tools cut time-to-market by 40% compared to industry average.</p>
+                    <div class="mt-4 text-teal-600 font-semibold">Average: 6-8 weeks vs 12-14 weeks</div>
+                </div>
+                
+                <div class="bg-white p-8 rounded-xl shadow-lg hover-lift text-center">
+                    <div class="w-16 h-16 bg-gradient-to-br from-teal-400 to-teal-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-dollar-sign text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-900">30% Cost Savings</h3>
+                    <p class="text-gray-600">Transparent pricing with no hidden fees. Our efficient processes save you 30% vs traditional agencies.</p>
+                    <div class="mt-4 text-teal-600 font-semibold">14-Day Money-Back Guarantee</div>
+                </div>
+                
+                <div class="bg-white p-8 rounded-xl shadow-lg hover-lift text-center">
+                    <div class="w-16 h-16 bg-gradient-to-br from-teal-400 to-teal-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-certificate text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-900">Zero Failed Projects</h3>
+                    <p class="text-gray-600">50+ projects delivered, 100% success rate. We commit to milestones and deliver—or you don't pay.</p>
+                    <div class="mt-4 text-teal-600 font-semibold">100% On-Time Delivery Record</div>
+                </div>
+                
+                <div class="bg-white p-8 rounded-xl shadow-lg hover-lift text-center">
+                    <div class="w-16 h-16 bg-gradient-to-br from-teal-400 to-teal-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-shield-alt text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-900">Enterprise Security</h3>
+                    <p class="text-gray-600">AWS certified with SOC 2 compliance. Your IP and data are protected with military-grade security.</p>
+                    <div class="mt-4 text-teal-600 font-semibold">NDA Signed Before Discovery</div>
+                </div>
+                
+                <div class="bg-white p-8 rounded-xl shadow-lg hover-lift text-center">
+                    <div class="w-16 h-16 bg-gradient-to-br from-teal-400 to-teal-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-users-cog text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-900">Senior Developers Only</h3>
+                    <p class="text-gray-600">No juniors on your project. Every team member has 5+ years experience and proven track record.</p>
+                    <div class="mt-4 text-teal-600 font-semibold">Average: 8 years experience</div>
+                </div>
+                
+                <div class="bg-white p-8 rounded-xl shadow-lg hover-lift text-center">
+                    <div class="w-16 h-16 bg-gradient-to-br from-teal-400 to-teal-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-headset text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-900">White-Glove Support</h3>
+                    <p class="text-gray-600">Dedicated account manager, daily standups, and 2-hour response SLA. Full transparency via shared dashboards.</p>
+                    <div class="mt-4 text-teal-600 font-semibold">24/7 Critical Issue Support</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section-padding bg-gradient-to-b from-white to-gray-50 pattern-dots">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-12 fade-in-up">
+                    <h2 class="text-4xl md:text-5xl font-bold mb-4 text-gray-900">About QUEM Systems</h2>
+                    <div class="w-24 h-1 mx-auto" style="background: linear-gradient(to right, #4DA2A9, #6BB8C0);"></div>
+                </div>
+                
+                <div class="prose prose-lg max-w-none">
+                    <p class="text-xl text-gray-700 mb-6 text-center">
+                        We are a team of Software Engineers and AI Product Engineers who bridge the gap between development, deployment, and intelligence.
+                    </p>
+                    
+                    <div class="grid md:grid-cols-2 gap-8 mt-12">
+                        <div class="glass-effect p-8 rounded-xl hover-lift shadow-lg">
+                            <div class="brand-teal text-5xl mb-4">
+                                <i class="fas fa-bullseye"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold mb-4 text-gray-900">Our Mission</h3>
+                            <p class="text-gray-700 leading-relaxed">
+                                To create systems that are quantifiable, extendable, and maintainable — where intelligence meets engineering discipline.
+                            </p>
+                        </div>
+                        
+                        <div class="glass-effect p-8 rounded-xl hover-lift shadow-lg">
+                            <div class="brand-teal text-5xl mb-4">
+                                <i class="fas fa-lightbulb"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold mb-4 text-gray-900">Our Approach</h3>
+                            <p class="text-gray-700 leading-relaxed">
+                                We combine academic rigor with real-world implementation, ensuring every solution is not only intelligent but also production-ready.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-12">
+                        <h3 class="text-2xl font-semibold mb-6 text-center text-gray-900">Our Core Values</h3>
+                        <div class="grid md:grid-cols-3 gap-6">
+                            <div class="text-center p-4">
+                                <i class="fas fa-shield-alt brand-teal text-3xl mb-3"></i>
+                                <h4 class="font-semibold mb-2">Integrity</h4>
+                                <p class="text-sm text-gray-600">Delivering work that reflects both skill and honesty</p>
+                            </div>
+                            <div class="text-center p-4">
+                                <i class="fas fa-gem brand-teal text-3xl mb-3"></i>
+                                <h4 class="font-semibold mb-2">Excellence</h4>
+                                <p class="text-sm text-gray-600">Pushing every line of code toward elegance</p>
+                            </div>
+                            <div class="text-center p-4">
+                                <i class="fas fa-rocket brand-teal text-3xl mb-3"></i>
+                                <h4 class="font-semibold mb-2">Impact</h4>
+                                <p class="text-sm text-gray-600">Creating measurable value technically and socially</p>
+                            </div>
+                            <div class="text-center p-4">
+                                <i class="fas fa-graduation-cap brand-teal text-3xl mb-3"></i>
+                                <h4 class="font-semibold mb-2">Learning</h4>
+                                <p class="text-sm text-gray-600">Thriving on curiosity and continuous evolution</p>
+                            </div>
+                            <div class="text-center p-4">
+                                <i class="fas fa-layer-group brand-teal text-3xl mb-3"></i>
+                                <h4 class="font-semibold mb-2">Depth</h4>
+                                <p class="text-sm text-gray-600">Valuing deep understanding over shallow trends</p>
+                            </div>
+                            <div class="text-center p-4">
+                                <i class="fas fa-leaf brand-teal text-3xl mb-3"></i>
+                                <h4 class="font-semibold mb-2">Simplicity</h4>
+                                <p class="text-sm text-gray-600">Believing elegance lies in simplicity</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Incorporation Certificate Section -->
+                    <div class="mt-12 pt-8 border-t border-gray-200">
+                        <div class="bg-gradient-to-r from-blue-50 to-cyan-50 rounded-lg p-6 md:p-8">
+                            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                                <div class="flex-1 text-center md:text-left">
+                                    <div class="flex items-center justify-center md:justify-start mb-3">
+                                        <i class="fas fa-certificate brand-teal text-3xl mr-3"></i>
+                                        <h3 class="text-2xl font-bold text-gray-900">Officially Registered Company</h3>
+                                    </div>
+                                    <p class="text-gray-700 mb-4">
+                                        QUEM Systems International is a legally incorporated and registered company, ensuring credibility, accountability, and professional standards in all our business operations.
+                                    </p>
+                                    <a href="logoandcertificate/Incorporation Certificate.pdf" target="_blank" class="inline-flex items-center brand-teal font-semibold hover:brand-teal transition">
+                                        <i class="fas fa-file-pdf mr-2"></i>View Incorporation Certificate
+                                    </a>
+                                </div>
+                                <div class="flex-shrink-0">
+                                    <div class="bg-white rounded-lg shadow-lg p-4 hover-lift">
+                                        <a href="logoandcertificate/Incorporation Certificate.pdf" target="_blank" class="block">
+                                            <i class="fas fa-certificate text-6xl brand-teal"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Engagement Models Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4 text-gray-900">Flexible Engagement Models</h2>
+                <div class="w-24 h-1 mx-auto" style="background: linear-gradient(to right, #4DA2A9, #6BB8C0);"></div>
+                <p class="text-xl text-gray-700 mt-4 max-w-3xl mx-auto">Choose the model that best fits your project requirements and budget</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <div class="bg-gradient-to-br from-gray-50 to-white p-8 rounded-xl border-2 border-gray-200 hover:border-teal-400 transition-all hover-lift">
+                    <div class="brand-teal text-4xl mb-4">
+                        <i class="fas fa-file-contract"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-gray-900">Fixed Price</h3>
+                    <div class="text-3xl font-bold text-teal-600 mb-2">$10K - $100K+</div>
+                    <p class="text-gray-600 mb-6 leading-relaxed">Perfect for well-defined projects with clear requirements and scope. You know the cost upfront.</p>
+                    <ul class="space-y-3 text-sm text-gray-700">
+                        <li class="flex items-start">
+                            <i class="fas fa-check brand-teal mr-3 mt-1"></i>
+                            <span>Clear deliverables & timeline</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check brand-teal mr-3 mt-1"></i>
+                            <span>Predictable budget</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check brand-teal mr-3 mt-1"></i>
+                            <span>Milestone-based payments</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="bg-gradient-to-br from-teal-50 to-cyan-50 p-8 rounded-xl border-2 border-teal-400 hover:shadow-2xl transition-all transform hover:scale-105 relative">
+                    <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-teal-500 to-cyan-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
+                        Most Popular
+                    </div>
+                    <div class="brand-teal text-4xl mb-4">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-gray-900">Time & Materials</h3>
+                    <div class="text-3xl font-bold text-teal-600 mb-2">$50 - $150/hr</div>
+                    <p class="text-gray-600 mb-6 leading-relaxed">Ideal for evolving projects where requirements may change. Pay only for actual work done.</p>
+                    <ul class="space-y-3 text-sm text-gray-700">
+                        <li class="flex items-start">
+                            <i class="fas fa-check brand-teal mr-3 mt-1"></i>
+                            <span>Maximum flexibility</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check brand-teal mr-3 mt-1"></i>
+                            <span>Adapt as you go</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check brand-teal mr-3 mt-1"></i>
+                            <span>Transparent hourly rates</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="bg-gradient-to-br from-gray-50 to-white p-8 rounded-xl border-2 border-gray-200 hover:border-teal-400 transition-all hover-lift">
+                    <div class="brand-teal text-4xl mb-4">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-gray-900">Dedicated Team</h3>
+                    <div class="text-3xl font-bold text-teal-600 mb-2">$8K - $25K/mo</div>
+                    <p class="text-gray-600 mb-6 leading-relaxed">Long-term projects requiring consistent resources. Get your own extended development team.</p>
+                    <ul class="space-y-3 text-sm text-gray-700">
+                        <li class="flex items-start">
+                            <i class="fas fa-check brand-teal mr-3 mt-1"></i>
+                            <span>Full-time dedicated engineers</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check brand-teal mr-3 mt-1"></i>
+                            <span>Direct team communication</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check brand-teal mr-3 mt-1"></i>
+                            <span>Monthly billing cycles</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <button onclick="openCalendly()" class="btn-primary text-lg">
+                    <i class="fas fa-comments mr-2"></i>Discuss Your Project
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Process Section -->
+    <section class="py-16 bg-gradient-to-b from-white to-gray-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4 text-gray-900">Our Proven Process</h2>
+                <div class="w-24 h-1 mx-auto" style="background: linear-gradient(to right, #4DA2A9, #6BB8C0);"></div>
+                <p class="text-xl text-gray-700 mt-4 max-w-3xl mx-auto">From concept to launch—transparent, efficient, and results-driven</p>
+            </div>
+            
+            <div class="max-w-5xl mx-auto">
+                <div class="relative">
+                    <!-- Timeline Line -->
+                    <div class="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-teal-400 to-cyan-600"></div>
+                    
+                    <!-- Step 1 -->
+                    <div class="relative flex items-center mb-12 md:mb-16">
+                        <div class="md:w-5/12 md:text-right md:pr-12">
+                            <div class="bg-white p-6 rounded-xl shadow-lg hover-lift inline-block">
+                                <h3 class="text-2xl font-bold mb-2 text-gray-900">1. Discovery & Planning</h3>
+                                <p class="text-gray-600 mb-3">Free consultation to understand your goals, challenges, and requirements.</p>
+                                <div class="text-sm text-teal-600 font-semibold">⏱️ 1-2 days • 100% Free</div>
+                            </div>
+                        </div>
+                        <div class="hidden md:flex absolute left-1/2 transform -translate-x-1/2 w-12 h-12 bg-gradient-to-br from-teal-400 to-teal-600 rounded-full items-center justify-center text-white font-bold text-lg z-10">
+                            1
+                        </div>
+                        <div class="md:w-5/12 md:pl-12"></div>
+                    </div>
+                    
+                    <!-- Step 2 -->
+                    <div class="relative flex items-center mb-12 md:mb-16">
+                        <div class="md:w-5/12 md:pr-12"></div>
+                        <div class="hidden md:flex absolute left-1/2 transform -translate-x-1/2 w-12 h-12 bg-gradient-to-br from-teal-400 to-teal-600 rounded-full items-center justify-center text-white font-bold text-lg z-10">
+                            2
+                        </div>
+                        <div class="md:w-5/12 md:pl-12">
+                            <div class="bg-white p-6 rounded-xl shadow-lg hover-lift inline-block">
+                                <h3 class="text-2xl font-bold mb-2 text-gray-900">2. Proposal & Agreement</h3>
+                                <p class="text-gray-600 mb-3">Detailed scope, timeline, and transparent pricing. NDA signed before we begin.</p>
+                                <div class="text-sm text-teal-600 font-semibold">⏱️ 2-3 days • Fixed Quote</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 3 -->
+                    <div class="relative flex items-center mb-12 md:mb-16">
+                        <div class="md:w-5/12 md:text-right md:pr-12">
+                            <div class="bg-white p-6 rounded-xl shadow-lg hover-lift inline-block">
+                                <h3 class="text-2xl font-bold mb-2 text-gray-900">3. Design & Prototyping</h3>
+                                <p class="text-gray-600 mb-3">Wireframes, mockups, and clickable prototypes for your approval.</p>
+                                <div class="text-sm text-teal-600 font-semibold">⏱️ 1-2 weeks • Iterative Feedback</div>
+                            </div>
+                        </div>
+                        <div class="hidden md:flex absolute left-1/2 transform -translate-x-1/2 w-12 h-12 bg-gradient-to-br from-teal-400 to-teal-600 rounded-full items-center justify-center text-white font-bold text-lg z-10">
+                            3
+                        </div>
+                        <div class="md:w-5/12 md:pl-12"></div>
+                    </div>
+                    
+                    <!-- Step 4 -->
+                    <div class="relative flex items-center mb-12 md:mb-16">
+                        <div class="md:w-5/12 md:pr-12"></div>
+                        <div class="hidden md:flex absolute left-1/2 transform -translate-x-1/2 w-12 h-12 bg-gradient-to-br from-teal-400 to-teal-600 rounded-full items-center justify-center text-white font-bold text-lg z-10">
+                            4
+                        </div>
+                        <div class="md:w-5/12 md:pl-12">
+                            <div class="bg-white p-6 rounded-xl shadow-lg hover-lift inline-block">
+                                <h3 class="text-2xl font-bold mb-2 text-gray-900">4. Development Sprints</h3>
+                                <p class="text-gray-600 mb-3">Agile 2-week sprints with daily updates and bi-weekly demos.</p>
+                                <div class="text-sm text-teal-600 font-semibold">⏱️ 4-12 weeks • Milestone Payments</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 5 -->
+                    <div class="relative flex items-center mb-12 md:mb-16">
+                        <div class="md:w-5/12 md:text-right md:pr-12">
+                            <div class="bg-white p-6 rounded-xl shadow-lg hover-lift inline-block">
+                                <h3 class="text-2xl font-bold mb-2 text-gray-900">5. Testing & QA</h3>
+                                <p class="text-gray-600 mb-3">Rigorous testing including unit, integration, and user acceptance testing.</p>
+                                <div class="text-sm text-teal-600 font-semibold">⏱️ 1-2 weeks • 99.9% Bug-Free</div>
+                            </div>
+                        </div>
+                        <div class="hidden md:flex absolute left-1/2 transform -translate-x-1/2 w-12 h-12 bg-gradient-to-br from-teal-400 to-teal-600 rounded-full items-center justify-center text-white font-bold text-lg z-10">
+                            5
+                        </div>
+                        <div class="md:w-5/12 md:pl-12"></div>
+                    </div>
+                    
+                    <!-- Step 6 -->
+                    <div class="relative flex items-center">
+                        <div class="md:w-5/12 md:pr-12"></div>
+                        <div class="hidden md:flex absolute left-1/2 transform -translate-x-1/2 w-12 h-12 bg-gradient-to-br from-teal-400 to-teal-600 rounded-full items-center justify-center text-white font-bold text-lg z-10">
+                            6
+                        </div>
+                        <div class="md:w-5/12 md:pl-12">
+                            <div class="bg-white p-6 rounded-xl shadow-lg hover-lift inline-block">
+                                <h3 class="text-2xl font-bold mb-2 text-gray-900">6. Launch & Support</h3>
+                                <p class="text-gray-600 mb-3">Smooth deployment with 90-day warranty and ongoing maintenance options.</p>
+                                <div class="text-sm text-teal-600 font-semibold">⏱️ Ongoing • 24/7 Support SLA</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <button onclick="openCalendly()" class="btn-primary text-lg">
+                    <i class="fas fa-play-circle mr-2"></i>Start Your Project Today
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section-padding bg-gradient-to-b from-gray-50 to-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4 text-gray-900">Our IT Services</h2>
+                <div class="w-24 h-1 mx-auto mb-4" style="background: linear-gradient(to right, #4DA2A9, #6BB8C0);"></div>
+                <p class="text-xl text-gray-700 max-w-3xl mx-auto">
+                    End-to-end software development services that transform your business ideas into powerful digital solutions
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-white p-8 rounded-xl shadow-lg hover-lift border border-gray-100">
+                    <div class="brand-teal text-4xl mb-4">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-900">AI & ML Solutions</h3>
+                    <p class="text-gray-700 mb-4">
+                        Build intelligent applications that automate tasks, predict outcomes, and provide deep insights from your data.
+                    </p>
+                    <ul class="text-sm text-gray-600 space-y-2">
+                        <li><i class="fas fa-check brand-teal mr-2"></i>Custom AI Model Development</li>
+                        <li><i class="fas fa-check brand-teal mr-2"></i>LLM Integration & Chatbots</li>
+                        <li><i class="fas fa-check brand-teal mr-2"></i>Predictive Analytics</li>
+                        <li><i class="fas fa-check brand-teal mr-2"></i>AI Strategy Consulting</li>
+                    </ul>
+                    <div class="mt-6 pt-4 border-t border-gray-100">
+                        <a href="#contact" class="brand-teal font-semibold text-sm hover:underline">
+                            Learn More <i class="fas fa-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="bg-white p-8 rounded-xl shadow-lg hover-lift border border-gray-100">
+                    <div class="brand-teal text-4xl mb-4">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-900">Custom Software Development</h3>
+                    <p class="text-gray-700 mb-4">
+                        Tailored software solutions designed specifically for your business needs, from web apps to enterprise systems.
+                    </p>
+                    <ul class="text-sm text-gray-600 space-y-2">
+                        <li><i class="fas fa-check brand-teal mr-2"></i>Web Application Development</li>
+                        <li><i class="fas fa-check brand-teal mr-2"></i>Enterprise Software Solutions</li>
+                        <li><i class="fas fa-check brand-teal mr-2"></i>API Development & Integration</li>
+                        <li><i class="fas fa-check brand-teal mr-2"></i>Legacy System Modernization</li>
+                    </ul>
+                    <div class="mt-6 pt-4 border-t border-gray-100">
+                        <a href="#contact" class="brand-teal font-semibold text-sm hover:underline">
+                            Learn More <i class="fas fa-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="bg-white p-8 rounded-xl shadow-lg hover-lift border border-gray-100">
+                    <div class="brand-teal text-4xl mb-4">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-900">Cloud & DevOps Services</h3>
+                    <p class="text-gray-700 mb-4">
+                        Accelerate delivery and reduce costs with automated CI/CD pipelines and scalable cloud infrastructure.
+                    </p>
+                    <ul class="text-sm text-gray-600 space-y-2">
+                        <li><i class="fas fa-check brand-teal mr-2"></i>Cloud Migration & Setup</li>
+                        <li><i class="fas fa-check brand-teal mr-2"></i>CI/CD Pipeline Development</li>
+                        <li><i class="fas fa-check brand-teal mr-2"></i>Infrastructure Automation</li>
+                        <li><i class="fas fa-check brand-teal mr-2"></i>24/7 Monitoring & Support</li>
+                    </ul>
+                    <div class="mt-6 pt-4 border-t border-gray-100">
+                        <a href="#contact" class="brand-teal font-semibold text-sm hover:underline">
+                            Learn More <i class="fas fa-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="bg-white p-8 rounded-xl shadow-lg hover-lift border border-gray-100">
+                    <div class="brand-teal text-4xl mb-4">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-900">MLOps & Model Deployment</h3>
+                    <p class="text-gray-700 mb-4">
+                        Deploy, monitor, and scale machine learning models in production with enterprise-grade MLOps practices.
+                    </p>
+                    <ul class="text-sm text-gray-600 space-y-2">
+                        <li><i class="fas fa-check brand-teal mr-2"></i>ML Pipeline Automation</li>
+                        <li><i class="fas fa-check brand-teal mr-2"></i>Model Monitoring & Retraining</li>
+                        <li><i class="fas fa-check brand-teal mr-2"></i>Scalable Model Serving</li>
+                        <li><i class="fas fa-check brand-teal mr-2"></i>Performance Optimization</li>
+                    </ul>
+                    <div class="mt-6 pt-4 border-t border-gray-100">
+                        <a href="#contact" class="brand-teal font-semibold text-sm hover:underline">
+                            Learn More <i class="fas fa-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Service 5 -->
+                <div class="bg-white p-8 rounded-xl shadow-lg hover-lift border border-gray-100">
+                    <div class="brand-teal text-4xl mb-4">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-900">Full-Stack Development</h3>
+                    <p class="text-gray-700 mb-4">
+                        Complete end-to-end development from frontend UI to backend systems and databases.
+                    </p>
+                    <ul class="text-sm text-gray-600 space-y-2">
+                        <li><i class="fas fa-check brand-teal mr-2"></i>React, Vue, Angular Development</li>
+                        <li><i class="fas fa-check brand-teal mr-2"></i>Python/Node.js Backend</li>
+                        <li><i class="fas fa-check brand-teal mr-2"></i>Database Design & Optimization</li>
+                        <li><i class="fas fa-check brand-teal mr-2"></i>RESTful & GraphQL APIs</li>
+                    </ul>
+                    <div class="mt-6 pt-4 border-t border-gray-100">
+                        <a href="#contact" class="brand-teal font-semibold text-sm hover:underline">
+                            Learn More <i class="fas fa-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Service 6 -->
+                <div class="bg-white p-8 rounded-xl shadow-lg hover-lift border border-gray-100">
+                    <div class="brand-teal text-4xl mb-4">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-900">IT Consulting & Training</h3>
+                    <p class="text-gray-700 mb-4">
+                        Expert guidance to optimize your technology stack and upskill your team for sustained success.
+                    </p>
+                    <ul class="text-sm text-gray-600 space-y-2">
+                        <li><i class="fas fa-check brand-teal mr-2"></i>Technology Strategy</li>
+                        <li><i class="fas fa-check brand-teal mr-2"></i>Architecture Review</li>
+                        <li><i class="fas fa-check brand-teal mr-2"></i>Team Training & Workshops</li>
+                        <li><i class="fas fa-check brand-teal mr-2"></i>Code Review & Optimization</li>
+                    </ul>
+                    <div class="mt-6 pt-4 border-t border-gray-100">
+                        <a href="#contact" class="brand-teal font-semibold text-sm hover:underline">
+                            Learn More <i class="fas fa-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tech Stack Section -->
+    <section class="section-padding bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold mb-4 text-gray-900">Technologies We Work With</h2>
+                <div class="w-24 h-1 mx-auto mb-4" style="background: linear-gradient(to right, #4DA2A9, #6BB8C0);"></div>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    A comprehensive stack for building intelligent, scalable, and production-ready systems
+                </p>
+            </div>
+            
+            <div class="max-w-6xl mx-auto">
+                <!-- Technologies Grid -->
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- AI & ML -->
+                    <div class="bg-white p-6 rounded-xl shadow-md hover-lift">
+                        <h3 class="text-xl font-bold mb-4 text-gray-900 flex items-center">
+                            <i class="fas fa-brain brand-teal mr-2"></i>
+                            AI & Machine Learning
+                        </h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="tech-badge px-3 py-1 rounded-md text-sm font-medium">Deep Learning</span>
+                            <span class="tech-badge px-3 py-1 rounded-md text-sm font-medium">NLP</span>
+                            <span class="tech-badge px-3 py-1 rounded-md text-sm font-medium">Transformers</span>
+                            <span class="tech-badge px-3 py-1 rounded-md text-sm font-medium">LLM</span>
+                            <span class="tech-badge px-3 py-1 rounded-md text-sm font-medium">RAG</span>
+                            <span class="tech-badge px-3 py-1 rounded-md text-sm font-medium">Agentic AI</span>
+                            <span class="tech-badge px-3 py-1 rounded-md text-sm font-medium">Fine-tuning</span>
+                            <span class="tech-badge px-3 py-1 rounded-md text-sm font-medium">LoRA</span>
+                            <span class="tech-badge px-3 py-1 rounded-md text-sm font-medium">PEFT</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Frameworks & Tools -->
+                    <div class="bg-white p-6 rounded-xl shadow-md hover-lift">
+                        <h3 class="text-xl font-bold mb-4 text-gray-900 flex items-center">
+                            <i class="fas fa-tools brand-teal mr-2"></i>
+                            Frameworks & Tools
+                        </h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="tech-badge px-3 py-1 rounded-md text-sm font-medium">LangChain</span>
+                            <span class="tech-badge px-3 py-1 rounded-md text-sm font-medium">LangGraph</span>
+                            <span class="tech-badge px-3 py-1 rounded-md text-sm font-medium">CrewAI</span>
+                            <span class="tech-badge px-3 py-1 rounded-md text-sm font-medium">FastMCP</span>
+                            <span class="tech-badge px-3 py-1 rounded-md text-sm font-medium">MLFlow</span>
+                            <span class="tech-badge px-3 py-1 rounded-md text-sm font-medium">ZenML</span>
+                            <span class="tech-badge px-3 py-1 rounded-md text-sm font-medium">FastAPI</span>
+                            <span class="tech-badge px-3 py-1 rounded-md text-sm font-medium">Flask</span>
+                        </div>
+                    </div>
+                    
+                    <!-- DevOps & Cloud -->
+                    <div class="bg-white p-6 rounded-xl shadow-md hover-lift">
+                        <h3 class="text-xl font-bold mb-4 text-gray-900 flex items-center">
+                            <i class="fas fa-cloud brand-teal mr-2"></i>
+                            DevOps & Cloud
+                        </h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="tech-badge px-3 py-1 rounded-md text-sm font-medium">MLOps</span>
+                            <span class="tech-badge px-3 py-1 rounded-md text-sm font-medium">LLMOps</span>
+                            <span class="tech-badge px-3 py-1 rounded-md text-sm font-medium">Docker</span>
+                            <span class="tech-badge px-3 py-1 rounded-md text-sm font-medium">Jenkins</span>
+                            <span class="tech-badge px-3 py-1 rounded-md text-sm font-medium">AWS</span>
+                            <span class="tech-badge px-3 py-1 rounded-md text-sm font-medium">GCP</span>
+                            <span class="tech-badge px-3 py-1 rounded-md text-sm font-medium">SageMaker</span>
+                            <span class="tech-badge px-3 py-1 rounded-md text-sm font-medium">Git</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section-padding bg-gradient-to-br from-gray-50 to-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4 text-gray-900">What Our Clients Say</h2>
+                <div class="w-24 h-1 mx-auto" style="background: linear-gradient(to right, #4DA2A9, #6BB8C0);"></div>
+                <p class="text-xl text-gray-700 mt-4">Don't just take our word for it</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <div class="bg-white p-8 rounded-xl shadow-lg hover-lift border border-gray-100">
+                    <div class="flex items-center mb-4">
+                        <div class="flex text-yellow-400 text-xl">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-6 italic leading-relaxed">
+                        "QUEM reduced our infrastructure costs by $120K annually and delivered our AI platform 6 weeks ahead of schedule. ROI was positive within 3 months."
+                    </p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-gradient-to-br from-teal-400 to-teal-600 rounded-full flex items-center justify-center text-white font-bold mr-4">
+                            JD
+                        </div>
+                        <div>
+                            <div class="font-semibold text-gray-900">James Davidson</div>
+                            <div class="text-sm text-gray-600">VP Technology, HealthTech Corp</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-8 rounded-xl shadow-lg hover-lift border border-gray-100">
+                    <div class="flex items-center mb-4">
+                        <div class="flex text-yellow-400 text-xl">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-6 italic leading-relaxed">
+                        "Migrated our legacy system with zero downtime. The 14-day money-back guarantee gave us confidence, but we never needed it. Flawless execution."
+                    </p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-gradient-to-br from-teal-400 to-teal-600 rounded-full flex items-center justify-center text-white font-bold mr-4">
+                            SK
+                        </div>
+                        <div>
+                            <div class="font-semibold text-gray-900">Sarah Kim</div>
+                            <div class="text-sm text-gray-600">Director of IT, FinServe Solutions</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-8 rounded-xl shadow-lg hover-lift border border-gray-100">
+                    <div class="flex items-center mb-4">
+                        <div class="flex text-yellow-400 text-xl">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-6 italic leading-relaxed">
+                        "Their AI-powered recommendation engine increased our conversion rate from 2.1% to 5.8%. That's an additional $2.1M in annual revenue. Worth every penny."
+                    </p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-gradient-to-br from-teal-400 to-teal-600 rounded-full flex items-center justify-center text-white font-bold mr-4">
+                            MP
+                        </div>
+                        <div>
+                            <div class="font-semibold text-gray-900">Michael Patel</div>
+                            <div class="text-sm text-gray-600">Founder & CEO, ShopFlow E-commerce</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section-padding gradient-bg text-white relative overflow-hidden">
+        <div class="absolute inset-0 pattern-dots opacity-10"></div>
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl md:text-5xl font-bold mb-4">Get Started Today</h2>
+                    <div class="w-24 h-1 mx-auto mb-4" style="background-color: #4DA2A9;"></div>
+                    <p class="text-xl text-gray-100">
+                        Let's discuss your project and create a custom solution for your business
+                    </p>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Contact Form -->
+                    <div class="glass-effect bg-opacity-10 backdrop-blur-lg rounded-2xl p-8 shadow-2xl border border-white border-opacity-20">
+                        <h3 class="text-2xl font-bold mb-6">Send Us a Message</h3>
+                        <form class="space-y-4">
+                            <div>
+                                <label class="block text-sm font-medium mb-2">Full Name *</label>
+                                <input type="text" required class="w-full px-4 py-3 rounded-lg bg-white bg-opacity-20 border border-white border-opacity-30 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-teal-400" placeholder="John Doe">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium mb-2">Email Address *</label>
+                                <input type="email" required class="w-full px-4 py-3 rounded-lg bg-white bg-opacity-20 border border-white border-opacity-30 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-teal-400" placeholder="john@company.com">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium mb-2">Phone Number</label>
+                                <input type="tel" class="w-full px-4 py-3 rounded-lg bg-white bg-opacity-20 border border-white border-opacity-30 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-teal-400" placeholder="+1 (555) 000-0000">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium mb-2">Project Details *</label>
+                                <textarea required rows="4" class="w-full px-4 py-3 rounded-lg bg-white bg-opacity-20 border border-white border-opacity-30 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-teal-400" placeholder="Tell us about your project..."></textarea>
+                            </div>
+                            <button type="submit" class="w-full bg-white text-teal-600 font-bold py-3 px-6 rounded-lg hover:bg-opacity-90 transition">
+                                Send Message <i class="fas fa-paper-plane ml-2"></i>
+                            </button>
+                        </form>
+                    </div>
+                    
+                    <!-- Calendly & Contact Info -->
+                    <div class="space-y-6">
+                        <div class="glass-effect bg-opacity-10 backdrop-blur-lg rounded-2xl p-8 shadow-2xl border border-white border-opacity-20">
+                            <h3 class="text-2xl font-bold mb-4">Or Schedule a Call</h3>
+                            <p class="text-gray-200 mb-6">Book a free 30-minute consultation to discuss your project requirements.</p>
+                            <button onclick="openCalendly()" class="w-full bg-white text-teal-600 font-bold py-3 px-6 rounded-lg hover:bg-opacity-90 transition">
+                                <i class="fas fa-calendar-alt mr-2"></i>View Available Times
+                            </button>
+                        </div>
+                        
+                        <div class="glass-effect bg-opacity-10 backdrop-blur-lg rounded-2xl p-8 shadow-2xl border border-white border-opacity-20">
+                            <h3 class="text-2xl font-bold mb-4">Contact Information</h3>
+                            <div class="space-y-4">
+                                <div class="flex items-start">
+                                    <i class="fas fa-envelope text-2xl brand-teal mr-4 mt-1"></i>
+                                    <div>
+                                        <p class="text-sm text-gray-200">Email</p>
+                                        <a href="mailto:info@quemsystems.com" class="text-white font-medium hover:text-teal-300">info@quemsystems.com</a>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <i class="fas fa-phone text-2xl brand-teal mr-4 mt-1"></i>
+                                    <div>
+                                        <p class="text-sm text-gray-200">Phone</p>
+                                        <a href="tel:+1234567890" class="text-white font-medium hover:text-teal-300">+1 (234) 567-890</a>
+                                        <p class="text-xs text-gray-300 mt-1">Mon-Fri, 9AM-6PM EST</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <i class="fas fa-map-marker-alt text-2xl brand-teal mr-4 mt-1"></i>
+                                    <div>
+                                        <p class="text-sm text-gray-200">Location</p>
+                                        <p class="text-white font-medium">Global Services</p>
+                                        <p class="text-xs text-gray-300 mt-1">Remote-First Company</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-8">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <a href="#home" class="block mb-4">
+                        <img src="logoandcertificate/FullLogo.png" alt="QUEM Systems International Logo" class="h-12 object-contain filter brightness-0 invert">
+                    </a>
+                    <p class="text-sm">
+                        Turning Software Systems into Intelligent Systems — Where Engineering Meets AI.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#home" class="hover-brand-teal transition">Home</a></li>
+                        <li><a href="#about" class="hover-brand-teal transition">About</a></li>
+                        <li><a href="#services" class="hover-brand-teal transition">Services</a></li>
+                        <li><a href="projects.html" class="hover-brand-teal transition">Projects</a></li>
+                        <li><a href="team.html" class="hover-brand-teal transition">Team</a></li>
+                        <li><a href="#contact" class="hover-brand-teal transition">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-4">Connect</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-2xl hover-brand-teal transition"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="text-2xl hover-brand-teal transition"><i class="fab fa-github"></i></a>
+                        <a href="#" class="text-2xl hover-brand-teal transition"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center text-sm">
+                <p>&copy; 2025 QUEM Systems International. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for mobile menu and smooth scrolling -->
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    // Close mobile menu if open
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+        
+        // Calendly popup widget function
+        function openCalendly() {
+            // Replace 'your-username/meeting' with your actual Calendly URL
+            Calendly.initPopupWidget({
+                url: 'https://calendly.com/your-username/meeting'
+            });
+            return false;
+        }
+    </script>
+    
+    <!-- Calendly inline widget script -->
+    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+</body>
+</html>

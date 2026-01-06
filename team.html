@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Team - QUEM Systems International</title>
+    <meta name="description" content="Meet the expert team at QUEM Systems International - AI Product Engineers, Data Scientists, and Full Stack Developers.">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom styles -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #072433 0%, #4DA2A9 100%);
+        }
+        
+        .text-gradient {
+            background: linear-gradient(135deg, #4DA2A9 0%, #072433 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .brand-teal {
+            color: #4DA2A9;
+        }
+        
+        .brand-teal-bg {
+            background-color: #4DA2A9;
+        }
+        
+        .brand-dark {
+            background-color: #072433;
+        }
+        
+        .hover-brand-teal:hover {
+            color: #4DA2A9;
+        }
+        
+        .hover-lift {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .hover-lift:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .section-padding {
+            padding: 5rem 0;
+        }
+        
+        @media (max-width: 768px) {
+            .section-padding {
+                padding: 3rem 0;
+            }
+        }
+        
+        .avatar-circle {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            font-weight: bold;
+            color: white;
+            margin: 0 auto;
+        }
+        
+        .skill-badge {
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+            color: #0369a1;
+            border: 1px solid #bae6fd;
+            transition: all 0.3s ease;
+        }
+        
+        .skill-badge:hover {
+            background: linear-gradient(135deg, #4DA2A9 0%, #3B8A91 100%);
+            color: white;
+            transform: translateY(-2px);
+        }
+        
+        .team-card {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .team-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, #4DA2A9, #6BB8C0);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900">
+    
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md fixed w-full top-0 z-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center space-x-3">
+                    <a href="index.html" class="flex items-center space-x-3">
+                        <img src="logoandcertificate/FullLogo_Transparent_NoBuffer.png" alt="QUEM Systems International Logo" class="h-10 md:h-12 object-contain">
+                        <span class="text-xl md:text-2xl font-bold text-gray-900 hidden sm:block">QUEM Systems International</span>
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-gray-700 hover-brand-teal transition">Home</a>
+                    <a href="index.html#about" class="text-gray-700 hover-brand-teal transition">About</a>
+                    <a href="index.html#services" class="text-gray-700 hover-brand-teal transition">Services</a>
+                    <a href="projects.html" class="text-gray-700 hover-brand-teal transition">Projects</a>
+                    <a href="team.html" class="brand-teal font-semibold transition">Team</a>
+                    <a href="index.html#contact" class="text-gray-700 hover-brand-teal transition">Contact</a>
+                    <button onclick="openCalendly()" class="brand-teal-bg text-white px-4 py-2 rounded-lg font-semibold hover:opacity-90 transition">
+                        Book Consultation
+                    </button>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-700 hover-brand-teal">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="px-4 pt-2 pb-3 space-y-1">
+                <a href="index.html" class="block px-3 py-2 text-gray-700 hover:bg-gray-100 rounded">Home</a>
+                <a href="index.html#about" class="block px-3 py-2 text-gray-700 hover:bg-gray-100 rounded">About</a>
+                <a href="index.html#services" class="block px-3 py-2 text-gray-700 hover:bg-gray-100 rounded">Services</a>
+                <a href="projects.html" class="block px-3 py-2 text-gray-700 hover:bg-gray-100 rounded">Projects</a>
+                <a href="team.html" class="block px-3 py-2 brand-teal font-semibold hover:bg-gray-100 rounded">Team</a>
+                <a href="index.html#contact" class="block px-3 py-2 text-gray-700 hover:bg-gray-100 rounded">Contact</a>
+                <button onclick="openCalendly()" class="w-full text-left brand-teal-bg text-white px-3 py-2 rounded font-semibold hover:opacity-90 transition">
+                    Book Consultation
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="gradient-bg text-white section-padding mt-16">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-4xl mx-auto text-center">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">Meet Our Expert Team</h1>
+                <p class="text-xl md:text-2xl text-gray-100 mb-4">
+                    Senior engineers with 8+ years average experience delivering enterprise-grade solutions
+                </p>
+                <div class="flex flex-wrap justify-center gap-4 text-sm mt-6">
+                    <div class="flex items-center text-gray-200">
+                        <i class="fas fa-check-circle brand-teal mr-2"></i>
+                        <span>10+ Team Members</span>
+                    </div>
+                    <div class="flex items-center text-gray-200">
+                        <i class="fas fa-check-circle brand-teal mr-2"></i>
+                        <span>AWS & Google Cloud Certified</span>
+                    </div>
+                    <div class="flex items-center text-gray-200">
+                        <i class="fas fa-check-circle brand-teal mr-2"></i>
+                        <span>50+ Successful Projects</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Stats -->
+    <section class="py-12 bg-gradient-to-r from-teal-500 to-cyan-600 text-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto text-center">
+                <div>
+                    <div class="text-4xl md:text-5xl font-bold mb-2">10+</div>
+                    <div class="text-sm md:text-base text-teal-100">Expert Engineers</div>
+                </div>
+                <div>
+                    <div class="text-4xl md:text-5xl font-bold mb-2">8+</div>
+                    <div class="text-sm md:text-base text-teal-100">Years Avg Experience</div>
+                </div>
+                <div>
+                    <div class="text-4xl md:text-5xl font-bold mb-2">15+</div>
+                    <div class="text-sm md:text-base text-teal-100">Certifications</div>
+                </div>
+                <div>
+                    <div class="text-4xl md:text-5xl font-bold mb-2">100%</div>
+                    <div class="text-sm md:text-base text-teal-100">Client Retention</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="section-padding bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl md:text-5xl font-bold mb-4 text-gray-900">Leadership & Core Team</h2>
+                    <div class="w-24 h-1 mx-auto mb-4" style="background: linear-gradient(to right, #4DA2A9, #6BB8C0);"></div>
+                    <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                        Each team member brings deep expertise and proven track record in delivering enterprise solutions. Our senior-only policy ensures quality execution from day one.
+                    </p>
+                </div>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Team Member 1 -->
+                    <div class="bg-white rounded-xl p-6 text-center hover-lift shadow-lg border border-gray-100 team-card">
+                        <div class="avatar-circle brand-teal-bg mb-4">
+                            IU
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">Irfan Ullah</h3>
+                        <p class="text-lg font-semibold brand-teal mb-2">Chief Executive Officer</p>
+                        <div class="text-sm text-gray-500 mb-4">10+ Years Experience</div>
+                        <div class="space-y-2 mb-4">
+                            <p class="text-sm font-semibold text-gray-800">MS Software Engineering | PhD (Candidate)</p>
+                            <p class="text-sm text-gray-600">AI Product Engineering & Solution Architecture</p>
+                            <p class="text-sm text-gray-600">Enterprise Systems Design & MLOps</p>
+                        </div>
+                        <div class="flex flex-wrap gap-2 justify-center mb-4">
+                            <span class="skill-badge px-3 py-1 rounded-full text-xs font-medium">AI/ML</span>
+                            <span class="skill-badge px-3 py-1 rounded-full text-xs font-medium">Architecture</span>
+                            <span class="skill-badge px-3 py-1 rounded-full text-xs font-medium">MLOps</span>
+                            <span class="skill-badge px-3 py-1 rounded-full text-xs font-medium">Python</span>
+                        </div>
+                        <a href="https://www.linkedin.com/in/irfan-ullah" target="_blank" class="inline-flex items-center text-blue-600 hover:text-blue-700 transition font-medium">
+                            <i class="fab fa-linkedin text-xl mr-2"></i>
+                            <span class="text-sm">Connect on LinkedIn</span>
+                        </a>
+                    </div>
+
+                    <!-- Team Member 2 -->
+                    <div class="bg-white rounded-xl p-6 text-center hover-lift shadow-lg border border-gray-100 team-card">
+                        <div class="avatar-circle brand-teal-bg mb-4">
+                            WK
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">Warsha Khan</h3>
+                        <p class="text-lg font-semibold brand-teal mb-2">CEO & Co-founder</p>
+                        <div class="text-sm text-gray-500 mb-4">8+ Years Experience</div>
+                        <div class="space-y-2 mb-4">
+                            <p class="text-sm font-semibold text-gray-800">MS Data Science</p>
+                            <p class="text-sm text-gray-600">Data Science & AI Engineering</p>
+                            <p class="text-sm text-gray-600">Predictive Analytics & NLP</p>
+                        </div>
+                        <div class="flex flex-wrap gap-2 justify-center mb-4">
+                            <span class="skill-badge px-3 py-1 rounded-full text-xs font-medium">Data Science</span>
+                            <span class="skill-badge px-3 py-1 rounded-full text-xs font-medium">ML/AI</span>
+                            <span class="skill-badge px-3 py-1 rounded-full text-xs font-medium">NLP</span>
+                            <span class="skill-badge px-3 py-1 rounded-full text-xs font-medium">Python</span>
+                        </div>
+                        <a href="https://www.linkedin.com/in/warsha-khan" target="_blank" class="inline-flex items-center text-blue-600 hover:text-blue-700 transition font-medium">
+                            <i class="fab fa-linkedin text-xl mr-2"></i>
+                            <span class="text-sm">Connect on LinkedIn</span>
+                        </a>
+                    </div>
+
+                    <!-- Team Member 3 -->
+                    <div class="bg-white rounded-xl p-6 text-center hover-lift shadow-lg border border-gray-100 team-card">
+                        <div class="avatar-circle brand-teal-bg mb-4">
+                            SI
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">Shoaib Ihsan</h3>
+                        <p class="text-lg font-semibold brand-teal mb-2">Co-founder & Lead Developer</p>
+                        <div class="text-sm text-gray-500 mb-4">7+ Years Experience</div>
+                        <div class="space-y-2 mb-4">
+                            <p class="text-sm font-semibold text-gray-800">Full Stack AI Development</p>
+                            <p class="text-sm text-gray-600">Cloud Architecture & DevOps</p>
+                            <p class="text-sm text-gray-600">Enterprise Application Development</p>
+                        </div>
+                        <div class="flex flex-wrap gap-2 justify-center mb-4">
+                            <span class="skill-badge px-3 py-1 rounded-full text-xs font-medium">Full Stack</span>
+                            <span class="skill-badge px-3 py-1 rounded-full text-xs font-medium">AI/ML</span>
+                            <span class="skill-badge px-3 py-1 rounded-full text-xs font-medium">DevOps</span>
+                            <span class="skill-badge px-3 py-1 rounded-full text-xs font-medium">AWS</span>
+                        </div>
+                        <a href="https://www.linkedin.com/in/shoaib-ihsan" target="_blank" class="inline-flex items-center text-blue-600 hover:text-blue-700 transition font-medium">
+                            <i class="fab fa-linkedin text-xl mr-2"></i>
+                            <span class="text-sm">Connect on LinkedIn</span>
+                        </a>
+                    </div>
+
+                    <!-- Team Member 4 -->
+                    <div class="bg-white rounded-xl p-6 text-center hover-lift shadow-lg border border-gray-100 team-card">
+                        <div class="avatar-circle brand-teal-bg mb-4">
+                            SK
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">Shahid Khan</h3>
+                        <p class="text-lg font-semibold brand-teal mb-2">Co-founder & Technical Lead</p>
+                        <div class="text-sm text-gray-500 mb-4">7+ Years Experience</div>
+                        <div class="space-y-2 mb-4">
+                            <p class="text-sm font-semibold text-gray-800">Full Stack AI Development</p>
+                            <p class="text-sm text-gray-600">System Integration & APIs</p>
+                            <p class="text-sm text-gray-600">Scalable Backend Architecture</p>
+                        </div>
+                        <div class="flex flex-wrap gap-2 justify-center mb-4">
+                            <span class="skill-badge px-3 py-1 rounded-full text-xs font-medium">Full Stack</span>
+                            <span class="skill-badge px-3 py-1 rounded-full text-xs font-medium">AI</span>
+                            <span class="skill-badge px-3 py-1 rounded-full text-xs font-medium">Backend</span>
+                            <span class="skill-badge px-3 py-1 rounded-full text-xs font-medium">APIs</span>
+                        </div>
+                        <a href="https://www.linkedin.com/in/shahid-khan" target="_blank" class="inline-flex items-center text-blue-600 hover:text-blue-700 transition font-medium">
+                            <i class="fab fa-linkedin text-xl mr-2"></i>
+                            <span class="text-sm">Connect on LinkedIn</span>
+                        </a>
+                    </div>
+
+                    <!-- Team Member 5 -->
+                    <div class="bg-white rounded-xl p-6 text-center hover-lift shadow-lg border border-gray-100 team-card">
+                        <div class="avatar-circle brand-teal-bg mb-4">
+                            KI
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">Kalsoom Ihsan</h3>
+                        <p class="text-lg font-semibold brand-teal mb-2">UI/UX Design Lead</p>
+                        <div class="text-sm text-gray-500 mb-4">5+ Years Experience</div>
+                        <div class="space-y-2 mb-4">
+                            <p class="text-sm font-semibold text-gray-800">User Experience Design</p>
+                            <p class="text-sm text-gray-600">Interface Design & Prototyping</p>
+                            <p class="text-sm text-gray-600">Design Systems & Brand Identity</p>
+                        </div>
+                        <div class="flex flex-wrap gap-2 justify-center mb-4">
+                            <span class="skill-badge px-3 py-1 rounded-full text-xs font-medium">UI/UX</span>
+                            <span class="skill-badge px-3 py-1 rounded-full text-xs font-medium">Figma</span>
+                            <span class="skill-badge px-3 py-1 rounded-full text-xs font-medium">Design Systems</span>
+                            <span class="skill-badge px-3 py-1 rounded-full text-xs font-medium">Prototyping</span>
+                        </div>
+                        <a href="https://www.linkedin.com/in/kalsoom-ihsan" target="_blank" class="inline-flex items-center text-blue-600 hover:text-blue-700 transition font-medium">
+                            <i class="fab fa-linkedin text-xl mr-2"></i>
+                            <span class="text-sm">Connect on LinkedIn</span>
+                        </a>
+                    </div>
+
+                    <!-- Team Member 6 - Shahzeb Khan -->
+                    <div class="bg-white rounded-xl p-6 text-center hover-lift shadow-lg border border-gray-100 team-card">
+                        <div class="avatar-circle brand-teal-bg mb-4">
+                            SZK
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">Shahzeb Khan</h3>
+                        <p class="text-lg font-semibold brand-teal mb-2">Product Owner / Business Analyst</p>
+                        <div class="text-sm text-gray-500 mb-4">6+ Years Experience</div>
+                        <div class="space-y-2 mb-4">
+                            <p class="text-sm font-semibold text-gray-800">AI Engineering & Product Strategy</p>
+                            <p class="text-sm text-gray-600">Requirements Analysis & Solution Design</p>
+                            <p class="text-sm text-gray-600">Stakeholder Management & Agile</p>
+                        </div>
+                        <div class="flex flex-wrap gap-2 justify-center mb-4">
+                            <span class="skill-badge px-3 py-1 rounded-full text-xs font-medium">Product Mgmt</span>
+                            <span class="skill-badge px-3 py-1 rounded-full text-xs font-medium">AI/ML</span>
+                            <span class="skill-badge px-3 py-1 rounded-full text-xs font-medium">Agile</span>
+                            <span class="skill-badge px-3 py-1 rounded-full text-xs font-medium">Analytics</span>
+                        </div>
+                        <a href="https://www.linkedin.com/in/shahzeb-khan" target="_blank" class="inline-flex items-center text-blue-600 hover:text-blue-700 transition font-medium">
+                            <i class="fab fa-linkedin text-xl mr-2"></i>
+                            <span class="text-sm">Connect on LinkedIn</span>
+                        </a>
+                    </div>
+
+                    <!-- Team Member 7 - Saad Ur Rahman -->
+                    <div class="bg-white rounded-xl p-6 text-center hover-lift shadow-lg border border-gray-100 team-card">
+                        <div class="avatar-circle brand-teal-bg mb-4">
+                            SR
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">Saad Ur Rahman</h3>
+                        <p class="text-lg font-semibold brand-teal mb-2">Chief Machine Learning Engineer</p>
+                        <div class="text-sm text-gray-500 mb-4">9+ Years Experience</div>
+                        <div class="space-y-2 mb-4">
+                            <p class="text-sm font-semibold text-gray-800">Machine Learning Engineering</p>
+                            <p class="text-sm text-gray-600">Deep Learning & Model Optimization</p>
+                            <p class="text-sm text-gray-600">MLOps & Production ML Systems</p>
+                        </div>
+                        <div class="flex flex-wrap gap-2 justify-center mb-4">
+                            <span class="skill-badge px-3 py-1 rounded-full text-xs font-medium">ML Engineering</span>
+                            <span class="skill-badge px-3 py-1 rounded-full text-xs font-medium">Deep Learning</span>
+                            <span class="skill-badge px-3 py-1 rounded-full text-xs font-medium">MLOps</span>
+                            <span class="skill-badge px-3 py-1 rounded-full text-xs font-medium">TensorFlow</span>
+                        </div>
+                        <a href="https://www.linkedin.com/in/saad-ur-rahman" target="_blank" class="inline-flex items-center text-blue-600 hover:text-blue-700 transition font-medium">
+                            <i class="fab fa-linkedin text-xl mr-2"></i>
+                            <span class="text-sm">Connect on LinkedIn</span>
+                        </a>
+                    </div>
+
+                    <!-- Team Member 8 - Ahmad Masood -->
+                    <div class="bg-white rounded-xl p-6 text-center hover-lift shadow-lg border border-gray-100 team-card">
+                        <div class="avatar-circle brand-teal-bg mb-4">
+                            AM
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">Ahmad Masood</h3>
+                        <p class="text-lg font-semibold brand-teal mb-2">Full Stack Software Engineer</p>
+                        <div class="text-sm text-gray-500 mb-4">6+ Years Experience</div>
+                        <div class="space-y-2 mb-4">
+                            <p class="text-sm font-semibold text-gray-800">Full Stack Web Development</p>
+                            <p class="text-sm text-gray-600">React, Node.js & Python Development</p>
+                            <p class="text-sm text-gray-600">Database Design & Cloud Services</p>
+                        </div>
+                        <div class="flex flex-wrap gap-2 justify-center mb-4">
+                            <span class="skill-badge px-3 py-1 rounded-full text-xs font-medium">React</span>
+                            <span class="skill-badge px-3 py-1 rounded-full text-xs font-medium">Node.js</span>
+                            <span class="skill-badge px-3 py-1 rounded-full text-xs font-medium">Python</span>
+                            <span class="skill-badge px-3 py-1 rounded-full text-xs font-medium">PostgreSQL</span>
+                        </div>
+                        <a href="https://www.linkedin.com/in/ahmad-masood" target="_blank" class="inline-flex items-center text-blue-600 hover:text-blue-700 transition font-medium">
+                            <i class="fab fa-linkedin text-xl mr-2"></i>
+                            <span class="text-sm">Connect on LinkedIn</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Certifications & Expertise -->
+    <section class="py-16 bg-gradient-to-br from-gray-50 to-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4 text-gray-900">Our Expertise & Certifications</h2>
+                <div class="w-24 h-1 mx-auto" style="background: linear-gradient(to right, #4DA2A9, #6BB8C0);"></div>
+                <p class="text-lg text-gray-600 mt-4 max-w-3xl mx-auto">Industry-recognized certifications and deep domain expertise across modern technologies</p>
+            </div>
+            
+            <div class="max-w-5xl mx-auto">
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="bg-white p-6 rounded-xl shadow-lg text-center hover-lift">
+                        <i class="fab fa-aws text-5xl text-orange-500 mb-4"></i>
+                        <h3 class="text-xl font-bold mb-2">AWS Certified</h3>
+                        <p class="text-sm text-gray-600">Solutions Architect & ML Specialty</p>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-xl shadow-lg text-center hover-lift">
+                        <i class="fab fa-google text-5xl text-blue-600 mb-4"></i>
+                        <h3 class="text-xl font-bold mb-2">Google Cloud</h3>
+                        <p class="text-sm text-gray-600">Professional ML Engineer</p>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-xl shadow-lg text-center hover-lift">
+                        <i class="fas fa-certificate text-5xl brand-teal mb-4"></i>
+                        <h3 class="text-xl font-bold mb-2">Agile & Scrum</h3>
+                        <p class="text-sm text-gray-600">Certified Scrum Masters</p>
+                    </div>
+                </div>
+                
+                <div class="mt-12 bg-gradient-to-r from-teal-50 to-cyan-50 rounded-xl p-8">
+                    <h3 class="text-2xl font-bold text-center mb-6">Why Our Team Stands Out</h3>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="flex items-start">
+                            <i class="fas fa-check-circle brand-teal text-2xl mr-4 mt-1"></i>
+                            <div>
+                                <h4 class="font-semibold text-lg mb-1">Senior-Only Policy</h4>
+                                <p class="text-sm text-gray-600">Every engineer has 5+ years of hands-on experience. No junior developers on client projects.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-check-circle brand-teal text-2xl mr-4 mt-1"></i>
+                            <div>
+                                <h4 class="font-semibold text-lg mb-1">Continuous Learning</h4>
+                                <p class="text-sm text-gray-600">Regular training on latest AI/ML technologies and cloud platforms to stay ahead.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-check-circle brand-teal text-2xl mr-4 mt-1"></i>
+                            <div>
+                                <h4 class="font-semibold text-lg mb-1">Proven Track Record</h4>
+                                <p class="text-sm text-gray-600">50+ successful projects delivered with 100% client retention rate.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-check-circle brand-teal text-2xl mr-4 mt-1"></i>
+                            <div>
+                                <h4 class="font-semibold text-lg mb-1">Cross-Functional Expertise</h4>
+                                <p class="text-sm text-gray-600">Each team member brings multiple skill sets, ensuring flexible collaboration.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section-padding gradient-bg text-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">Ready to Work With Our Expert Team?</h2>
+            <p class="text-xl mb-8 text-gray-100 max-w-2xl mx-auto">Let's schedule a free consultation to discuss your project. No commitment required.</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button onclick="openCalendly()" class="bg-white brand-teal px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition hover-lift inline-block">
+                    <i class="fas fa-calendar-check mr-2"></i>Schedule Free Consultation
+                </button>
+                <a href="index.html#contact" class="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white transition inline-block" onmouseover="this.style.color='#4DA2A9'" onmouseout="this.style.color='white'">
+                    <i class="fas fa-envelope mr-2"></i>Send Message
+                </a>
+            </div>
+            <p class="text-sm text-gray-300 mt-6"><i class="fas fa-lock mr-1"></i> 14-Day Money-Back Guarantee • NDA Protection • Free ROI Assessment</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-8">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <a href="index.html" class="block mb-4">
+                        <img src="logoandcertificate/FullLogo.png" alt="QUEM Systems International Logo" class="h-12 object-contain filter brightness-0 invert">
+                    </a>
+                    <p class="text-sm">
+                        Turning Software Systems into Intelligent Systems — Where Engineering Meets AI.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="index.html" class="hover-brand-teal transition">Home</a></li>
+                        <li><a href="index.html#about" class="hover-brand-teal transition">About</a></li>
+                        <li><a href="index.html#services" class="hover-brand-teal transition">Services</a></li>
+                        <li><a href="projects.html" class="hover-brand-teal transition">Projects</a></li>
+                        <li><a href="team.html" class="hover-brand-teal transition">Team</a></li>
+                        <li><a href="index.html#contact" class="hover-brand-teal transition">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-4">Connect</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-2xl hover-brand-teal transition"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="text-2xl hover-brand-teal transition"><i class="fab fa-github"></i></a>
+                        <a href="#" class="text-2xl hover-brand-teal transition"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center text-sm">
+                <p>&copy; 2025 QUEM Systems International. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for mobile menu and smooth scrolling -->
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        if (mobileMenuBtn && mobileMenu) {
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href.startsWith('#') && href.length > 1) {
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                        // Close mobile menu if open
+                        if (mobileMenu) {
+                            mobileMenu.classList.add('hidden');
+                        }
+                    }
+                }
+            });
+        });
+        
+        // Calendly popup widget function
+        function openCalendly() {
+            // Replace 'your-username/meeting' with your actual Calendly URL
+            if (typeof Calendly !== 'undefined') {
+                Calendly.initPopupWidget({
+                    url: 'https://calendly.com/your-username/meeting'
+                });
+            }
+            return false;
+        }
+    </script>
+    
+    <!-- Calendly inline widget script -->
+    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+</body>
+</html>

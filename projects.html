@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - QUEM Systems International</title>
+    <meta name="description" content="Explore our portfolio of AI/ML projects, mobile applications, web applications, and automation tools built by QUEM Systems International.">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Calendly CSS -->
+    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+    
+    <!-- Custom styles -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #072433 0%, #4DA2A9 100%);
+        }
+        
+        .text-gradient {
+            background: linear-gradient(135deg, #4DA2A9 0%, #072433 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .brand-teal {
+            color: #4DA2A9;
+        }
+        
+        .brand-teal-bg {
+            background-color: #4DA2A9;
+        }
+        
+        .brand-dark {
+            background-color: #072433;
+        }
+        
+        .hover-brand-teal:hover {
+            color: #4DA2A9;
+        }
+        
+        .hover-lift {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .hover-lift:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .section-padding {
+            padding: 5rem 0;
+        }
+        
+        @media (max-width: 768px) {
+            .section-padding {
+                padding: 3rem 0;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900">
+    
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md fixed w-full top-0 z-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center space-x-3">
+                    <a href="index.html" class="flex items-center space-x-3">
+                        <img src="logoandcertificate/FullLogo_Transparent_NoBuffer.png" alt="QUEM Systems International Logo" class="h-10 md:h-12 object-contain">
+                        <span class="text-xl md:text-2xl font-bold text-gray-900 hidden sm:block">QUEM Systems International</span>
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-gray-700 hover-brand-teal transition">Home</a>
+                    <a href="index.html#about" class="text-gray-700 hover-brand-teal transition">About</a>
+                    <a href="index.html#services" class="text-gray-700 hover-brand-teal transition">Services</a>
+                    <a href="projects.html" class="brand-teal font-semibold transition">Projects</a>
+                    <a href="team.html" class="text-gray-700 hover-brand-teal transition">Team</a>
+                    <a href="index.html#contact" class="text-gray-700 hover-brand-teal transition">Contact</a>
+                    <button onclick="openCalendly()" class="brand-teal-bg text-white px-4 py-2 rounded-lg font-semibold hover:opacity-90 transition">
+                        Book Consultation
+                    </button>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-700 hover-brand-teal">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="px-4 pt-2 pb-3 space-y-1">
+                <a href="index.html" class="block px-3 py-2 text-gray-700 hover:bg-gray-100 rounded">Home</a>
+                <a href="index.html#about" class="block px-3 py-2 text-gray-700 hover:bg-gray-100 rounded">About</a>
+                <a href="index.html#services" class="block px-3 py-2 text-gray-700 hover:bg-gray-100 rounded">Services</a>
+                <a href="projects.html" class="block px-3 py-2 brand-teal font-semibold hover:bg-gray-100 rounded">Projects</a>
+                <a href="team.html" class="block px-3 py-2 text-gray-700 hover:bg-gray-100 rounded">Team</a>
+                <a href="index.html#contact" class="block px-3 py-2 text-gray-700 hover:bg-gray-100 rounded">Contact</a>
+                <button onclick="openCalendly()" class="w-full text-left brand-teal-bg text-white px-3 py-2 rounded font-semibold hover:opacity-90 transition">
+                    Book Consultation
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="gradient-bg text-white section-padding mt-16">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-4xl mx-auto text-center">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">Our Projects</h1>
+                <p class="text-xl md:text-2xl text-gray-100">
+                    Showcasing intelligent systems, applications, and automation solutions
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI/ML Projects Section -->
+    <section class="section-padding bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold mb-4 text-gray-900">
+                    <i class="fas fa-brain brand-teal mr-3"></i>AI & Machine Learning Projects
+                </h2>
+                <div class="w-24 h-1 mx-auto" style="background: linear-gradient(to right, #4DA2A9, #6BB8C0);"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Project 1 -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md hover-lift border border-gray-200">
+                    <div class="brand-teal text-3xl mb-4">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-900">LLM-Driven Code Generation</h3>
+                    <p class="text-gray-700 mb-4">
+                        Web application code generation system using Class Diagrams and Large Language Models for automated software development.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-teal-100 text-teal-700 text-xs rounded-full">LLM</span>
+                        <span class="px-3 py-1 bg-teal-100 text-teal-700 text-xs rounded-full">Code Generation</span>
+                        <span class="px-3 py-1 bg-teal-100 text-teal-700 text-xs rounded-full">Web Applications</span>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md hover-lift border border-gray-200">
+                    <div class="brand-teal text-3xl mb-4">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-900">Bill Passage & Voter Prediction Chatbot</h3>
+                    <p class="text-gray-700 mb-4">
+                        Web-based chatbot for analyzing and predicting bill passage using fine-tuned BERT model for intent recognition, semantic similarity, and statistical forecasting.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-teal-100 text-teal-700 text-xs rounded-full">BERT</span>
+                        <span class="px-3 py-1 bg-teal-100 text-teal-700 text-xs rounded-full">NLP</span>
+                        <span class="px-3 py-1 bg-teal-100 text-teal-700 text-xs rounded-full">Statistical Modeling</span>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md hover-lift border border-gray-200">
+                    <div class="brand-teal text-3xl mb-4">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-900">BERT Intent Recognition</h3>
+                    <p class="text-gray-700 mb-4">
+                        Fine-tuned BERT model for accurate intent recognition from natural language prompts, enabling intelligent conversational systems.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-teal-100 text-teal-700 text-xs rounded-full">BERT</span>
+                        <span class="px-3 py-1 bg-teal-100 text-teal-700 text-xs rounded-full">Fine-tuning</span>
+                        <span class="px-3 py-1 bg-teal-100 text-teal-700 text-xs rounded-full">NLP</span>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md hover-lift border border-gray-200">
+                    <div class="brand-teal text-3xl mb-4">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-900">Stock Price Prediction</h3>
+                    <p class="text-gray-700 mb-4">
+                        Predictive model integrating sentiment analysis with LSTM networks to forecast stock price movements using financial news and social media data.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-teal-100 text-teal-700 text-xs rounded-full">LSTM</span>
+                        <span class="px-3 py-1 bg-teal-100 text-teal-700 text-xs rounded-full">Sentiment Analysis</span>
+                        <span class="px-3 py-1 bg-teal-100 text-teal-700 text-xs rounded-full">Time Series</span>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md hover-lift border border-gray-200">
+                    <div class="brand-teal text-3xl mb-4">
+                        <i class="fas fa-smile"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-900">Emotion Detection in Text</h3>
+                    <p class="text-gray-700 mb-4">
+                        Transformer-based model (DistilBERT) fine-tuned for emotion classification achieving 92.4% accuracy across six emotion categories using Hugging Face.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-teal-100 text-teal-700 text-xs rounded-full">Transformers</span>
+                        <span class="px-3 py-1 bg-teal-100 text-teal-700 text-xs rounded-full">DistilBERT</span>
+                        <span class="px-3 py-1 bg-teal-100 text-teal-700 text-xs rounded-full">92.4% Accuracy</span>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md hover-lift border border-gray-200">
+                    <div class="brand-teal text-3xl mb-4">
+                        <i class="fas fa-book-quran"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-900">Quran & Hadith RAG System</h3>
+                    <p class="text-gray-700 mb-4">
+                        Retrieval-Augmented Generation system for Quran and Hadith integrated with Llama2, accessible through ReactNative mobile app with Python FastAPI backend.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-teal-100 text-teal-700 text-xs rounded-full">RAG</span>
+                        <span class="px-3 py-1 bg-teal-100 text-teal-700 text-xs rounded-full">Llama2</span>
+                        <span class="px-3 py-1 bg-teal-100 text-teal-700 text-xs rounded-full">FastAPI</span>
+                    </div>
+                </div>
+
+                <!-- Project 7 -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md hover-lift border border-gray-200">
+                    <div class="brand-teal text-3xl mb-4">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-900">Upwork Automation Tool</h3>
+                    <p class="text-gray-700 mb-4">
+                        Chrome extension with LLM integration for automatic proposal generation and job application process automation.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-teal-100 text-teal-700 text-xs rounded-full">LLM</span>
+                        <span class="px-3 py-1 bg-teal-100 text-teal-700 text-xs rounded-full">Chrome Extension</span>
+                        <span class="px-3 py-1 bg-teal-100 text-teal-700 text-xs rounded-full">Automation</span>
+                    </div>
+                </div>
+
+                <!-- Project 8 -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md hover-lift border border-gray-200">
+                    <div class="brand-teal text-3xl mb-4">
+                        <i class="fas fa-satellite-dish"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-900">IoT Data Analysis Automation</h3>
+                    <p class="text-gray-700 mb-4">
+                        Event-driven data analysis automation tool for IoT devices, enabling real-time processing and insights from sensor data.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-teal-100 text-teal-700 text-xs rounded-full">IoT</span>
+                        <span class="px-3 py-1 bg-teal-100 text-teal-700 text-xs rounded-full">Event-Driven</span>
+                        <span class="px-3 py-1 bg-teal-100 text-teal-700 text-xs rounded-full">Automation</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mobile Applications Section -->
+    <section class="section-padding bg-gray-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold mb-4 text-gray-900">
+                    <i class="fas fa-mobile-alt brand-teal mr-3"></i>Mobile Applications
+                </h2>
+                <div class="w-24 h-1 mx-auto" style="background: linear-gradient(to right, #4DA2A9, #6BB8C0);"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Mobile Project 1 -->
+                <div class="bg-white p-6 rounded-lg shadow-md hover-lift border border-gray-200">
+                    <div class="brand-teal text-3xl mb-4">
+                        <i class="fab fa-react"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-900">Janus Mobile App</h3>
+                    <p class="text-gray-700 mb-4">
+                        Cross-platform mobile application built with ReactNative.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-blue-100 text-blue-700 text-xs rounded-full">ReactNative</span>
+                    </div>
+                </div>
+
+                <!-- Mobile Project 2 -->
+                <div class="bg-white p-6 rounded-lg shadow-md hover-lift border border-gray-200">
+                    <div class="brand-teal text-3xl mb-4">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-900">E-commerce UK Markets</h3>
+                    <p class="text-gray-700 mb-4">
+                        Complete e-commerce solution for UK markets with user and admin applications.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-orange-100 text-orange-700 text-xs rounded-full">Android Studio</span>
+                        <span class="px-3 py-1 bg-orange-100 text-orange-700 text-xs rounded-full">Java</span>
+                    </div>
+                </div>
+
+                <!-- Mobile Project 3 -->
+                <div class="bg-white p-6 rounded-lg shadow-md hover-lift border border-gray-200">
+                    <div class="brand-teal text-3xl mb-4">
+                        <i class="fas fa-cut"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-900">Barbers App</h3>
+                    <p class="text-gray-700 mb-4">
+                        Mobile application for barbers, available on both Android and iOS platforms.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-blue-100 text-blue-700 text-xs rounded-full">ReactNative</span>
+                    </div>
+                </div>
+
+                <!-- Mobile Project 4 -->
+                <div class="bg-white p-6 rounded-lg shadow-md hover-lift border border-gray-200">
+                    <div class="brand-teal text-3xl mb-4">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-900">BookWonk</h3>
+                    <p class="text-gray-700 mb-4">
+                        Book exchange mobile application built with ReactNative.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-blue-100 text-blue-700 text-xs rounded-full">ReactNative</span>
+                    </div>
+                </div>
+
+                <!-- Mobile Project 5 -->
+                <div class="bg-white p-6 rounded-lg shadow-md hover-lift border border-gray-200">
+                    <div class="brand-teal text-3xl mb-4">
+                        <i class="fas fa-golf-ball"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-900">Golfrica</h3>
+                    <p class="text-gray-700 mb-4">
+                        Golf-focused mobile application developed with ReactNative.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-blue-100 text-blue-700 text-xs rounded-full">ReactNative</span>
+                    </div>
+                </div>
+
+                <!-- Mobile Project 6 -->
+                <div class="bg-white p-6 rounded-lg shadow-md hover-lift border border-gray-200">
+                    <div class="brand-teal text-3xl mb-4">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-900">Alarm App</h3>
+                    <p class="text-gray-700 mb-4">
+                        Android alarm application with advanced features.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-orange-100 text-orange-700 text-xs rounded-full">Android Studio</span>
+                    </div>
+                </div>
+
+                <!-- Mobile Project 7 -->
+                <div class="bg-white p-6 rounded-lg shadow-md hover-lift border border-gray-200">
+                    <div class="brand-teal text-3xl mb-4">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-900">Carpool</h3>
+                    <p class="text-gray-700 mb-4">
+                        Ride-sharing mobile application built with ReactNative.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-blue-100 text-blue-700 text-xs rounded-full">ReactNative</span>
+                    </div>
+                </div>
+
+                <!-- Mobile Project 8 -->
+                <div class="bg-white p-6 rounded-lg shadow-md hover-lift border border-gray-200">
+                    <div class="brand-teal text-3xl mb-4">
+                        <i class="fas fa-language"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-900">PolyGlotsPoint</h3>
+                    <p class="text-gray-700 mb-4">
+                        Language learning and exchange platform built with ReactNative.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-blue-100 text-blue-700 text-xs rounded-full">ReactNative</span>
+                    </div>
+                </div>
+
+                <!-- Mobile Project 9 -->
+                <div class="bg-white p-6 rounded-lg shadow-md hover-lift border border-gray-200">
+                    <div class="brand-teal text-3xl mb-4">
+                        <i class="fas fa-share-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-900">Swaps App</h3>
+                    <p class="text-gray-700 mb-4">
+                        Social media application with Android and ReactNative versions, backed by Laravel APIs.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-blue-100 text-blue-700 text-xs rounded-full">ReactNative</span>
+                        <span class="px-3 py-1 bg-orange-100 text-orange-700 text-xs rounded-full">Laravel</span>
+                    </div>
+                </div>
+
+                <!-- Mobile Project 10 -->
+                <div class="bg-white p-6 rounded-lg shadow-md hover-lift border border-gray-200">
+                    <div class="brand-teal text-3xl mb-4">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-900">Video Dune</h3>
+                    <p class="text-gray-700 mb-4">
+                        Video streaming application for Android with Laravel web backend.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-orange-100 text-orange-700 text-xs rounded-full">Android Studio</span>
+                        <span class="px-3 py-1 bg-orange-100 text-orange-700 text-xs rounded-full">Laravel</span>
+                    </div>
+                </div>
+
+                <!-- Mobile Project 11 -->
+                <div class="bg-white p-6 rounded-lg shadow-md hover-lift border border-gray-200">
+                    <div class="brand-teal text-3xl mb-4">
+                        <i class="fas fa-book-medical"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-900">Medical Dictionary</h3>
+                    <p class="text-gray-700 mb-4">
+                        Offline medical dictionary application for Android.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-orange-100 text-orange-700 text-xs rounded-full">Android Studio</span>
+                    </div>
+                </div>
+
+                <!-- Mobile Project 12 -->
+                <div class="bg-white p-6 rounded-lg shadow-md hover-lift border border-gray-200">
+                    <div class="brand-teal text-3xl mb-4">
+                        <i class="fas fa-plane"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-900">FlightMates</h3>
+                    <p class="text-gray-700 mb-4">
+                        Flight tracking and travel companion application for Android.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-orange-100 text-orange-700 text-xs rounded-full">Android Studio</span>
+                        <a href="https://github.com/theirfanirfi/Android-Flight-Mates-App" target="_blank" class="px-3 py-1 bg-gray-100 text-gray-700 text-xs rounded-full hover:bg-gray-200">
+                            <i class="fab fa-github mr-1"></i>View Code
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Mobile Project 13 -->
+                <div class="bg-white p-6 rounded-lg shadow-md hover-lift border border-gray-200">
+                    <div class="brand-teal text-3xl mb-4">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-900">Dating App</h3>
+                    <p class="text-gray-700 mb-4">
+                        Cross-platform dating application built with ReactNative.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-blue-100 text-blue-700 text-xs rounded-full">ReactNative</span>
+                    </div>
+                </div>
+
+                <!-- Mobile Project 14 -->
+                <div class="bg-white p-6 rounded-lg shadow-md hover-lift border border-gray-200">
+                    <div class="brand-teal text-3xl mb-4">
+                        <i class="fas fa-link"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-900">Synapse</h3>
+                    <p class="text-gray-700 mb-4">
+                        Social networking application built with ReactNative.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-blue-100 text-blue-700 text-xs rounded-full">ReactNative</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Web Applications Section -->
+    <section class="section-padding bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold mb-4 text-gray-900">
+                    <i class="fas fa-globe brand-teal mr-3"></i>Web Applications
+                </h2>
+                <div class="w-24 h-1 mx-auto" style="background: linear-gradient(to right, #4DA2A9, #6BB8C0);"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Web Project 1 -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md hover-lift border border-gray-200">
+                    <div class="brand-teal text-3xl mb-4">
+                        <i class="fas fa-tint"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-900">Blood Donation Society</h3>
+                    <p class="text-gray-700 mb-4">
+                        Web platform for blood donation management and coordination.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-red-100 text-red-700 text-xs rounded-full">Laravel</span>
+                    </div>
+                </div>
+
+                <!-- Web Project 2 -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md hover-lift border border-gray-200">
+                    <div class="brand-teal text-3xl mb-4">
+                        <i class="fas fa-shopping-bag"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-900">E-commerce Platform</h3>
+                    <p class="text-gray-700 mb-4">
+                        Full-featured e-commerce solution for UK markets with Laravel backend.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-red-100 text-red-700 text-xs rounded-full">Laravel</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-700 text-xs rounded-full">Angular</span>
+                    </div>
+                </div>
+
+                <!-- Web Project 3 -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md hover-lift border border-gray-200">
+                    <div class="brand-teal text-3xl mb-4">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-900">Forever Community</h3>
+                    <p class="text-gray-700 mb-4">
+                        Austrian community membership platform built with Flask, React, and Domain-Driven Architecture.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-green-100 text-green-700 text-xs rounded-full">Flask</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-700 text-xs rounded-full">React</span>
+                    </div>
+                </div>
+
+                <!-- Web Project 4 -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md hover-lift border border-gray-200">
+                    <div class="brand-teal text-3xl mb-4">
+                        <i class="fas fa-dollar-sign"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-900">Vittas International</h3>
+                    <p class="text-gray-700 mb-4">
+                        Lending company management system built with Flask.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-green-100 text-green-700 text-xs rounded-full">Flask</span>
+                    </div>
+                </div>
+
+                <!-- Web Project 5 -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md hover-lift border border-gray-200">
+                    <div class="brand-teal text-3xl mb-4">
+                        <i class="fas fa-pizza-slice"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-900">Pizza Hut MVP</h3>
+                    <p class="text-gray-700 mb-4">
+                        Restaurant management and ordering system built with Flask.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-green-100 text-green-700 text-xs rounded-full">Flask</span>
+                    </div>
+                </div>
+
+                <!-- Web Project 6 -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md hover-lift border border-gray-200">
+                    <div class="brand-teal text-3xl mb-4">
+                        <i class="fas fa-car-side"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-900">Uber Rides MVP</h3>
+                    <p class="text-gray-700 mb-4">
+                        Ride-sharing platform minimum viable product built with Flask.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-green-100 text-green-700 text-xs rounded-full">Flask</span>
+                    </div>
+                </div>
+
+                <!-- Web Project 7 -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md hover-lift border border-gray-200">
+                    <div class="brand-teal text-3xl mb-4">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-900">MaxTech Tutorial Site</h3>
+                    <p class="text-gray-700 mb-4">
+                        Educational tutorial website with custom WordPress themes and plugins.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-blue-100 text-blue-700 text-xs rounded-full">WordPress</span>
+                        <a href="https://github.com/theirfanirfi/Maxtech-Tutorial-Site-WordPress" target="_blank" class="px-3 py-1 bg-gray-100 text-gray-700 text-xs rounded-full hover:bg-gray-200">
+                            <i class="fab fa-github mr-1"></i>View Code
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Web Project 8 -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md hover-lift border border-gray-200">
+                    <div class="brand-teal text-3xl mb-4">
+                        <i class="fas fa-newspaper"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-900">PPost News Agency</h3>
+                    <p class="text-gray-700 mb-4">
+                        News publishing platform built with WordPress.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-blue-100 text-blue-700 text-xs rounded-full">WordPress</span>
+                        <a href="https://github.com/theirfanirfi/Ppost-Wordpress" target="_blank" class="px-3 py-1 bg-gray-100 text-gray-700 text-xs rounded-full hover:bg-gray-200">
+                            <i class="fab fa-github mr-1"></i>View Code
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Web Project 9 -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md hover-lift border border-gray-200">
+                    <div class="brand-teal text-3xl mb-4">
+                        <i class="fas fa-school"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-900">School Management System</h3>
+                    <p class="text-gray-700 mb-4">
+                        Comprehensive school administration system built with CodeIgniter.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-orange-100 text-orange-700 text-xs rounded-full">CodeIgniter</span>
+                        <a href="https://github.com/theirfanirfi/school-management-system" target="_blank" class="px-3 py-1 bg-gray-100 text-gray-700 text-xs rounded-full hover:bg-gray-200">
+                            <i class="fab fa-github mr-1"></i>View Code
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Web Project 10 -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md hover-lift border border-gray-200">
+                    <div class="brand-teal text-3xl mb-4">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-900">Laravel Tutorial Series</h3>
+                    <p class="text-gray-700 mb-4">
+                        Educational platform and tutorial management system built with Laravel.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-red-100 text-red-700 text-xs rounded-full">Laravel</span>
+                        <a href="https://github.com/theirfanirfi/laravel-tutorial-series" target="_blank" class="px-3 py-1 bg-gray-100 text-gray-700 text-xs rounded-full hover:bg-gray-200">
+                            <i class="fab fa-github mr-1"></i>View Code
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Web Project 11 -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md hover-lift border border-gray-200">
+                    <div class="brand-teal text-3xl mb-4">
+                        <i class="fas fa-tasks"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-900">Project Management</h3>
+                    <p class="text-gray-700 mb-4">
+                        Full-stack project management application built with MERN stack.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-green-100 text-green-700 text-xs rounded-full">MERN</span>
+                        <a href="https://github.com/theirfanirfi/projectManagement" target="_blank" class="px-3 py-1 bg-gray-100 text-gray-700 text-xs rounded-full hover:bg-gray-200">
+                            <i class="fab fa-github mr-1"></i>View Code
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Web Project 12 -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md hover-lift border border-gray-200">
+                    <div class="brand-teal text-3xl mb-4">
+                        <i class="fas fa-bell"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-900">Adhoc Notification Tool</h3>
+                    <p class="text-gray-700 mb-4">
+                        Real-time notification management system built with Angular.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-red-100 text-red-700 text-xs rounded-full">Angular</span>
+                        <a href="https://github.com/theirfanirfi/AdHocNotificationTool" target="_blank" class="px-3 py-1 bg-gray-100 text-gray-700 text-xs rounded-full hover:bg-gray-200">
+                            <i class="fab fa-github mr-1"></i>View Code
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Web Project 13 -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md hover-lift border border-gray-200">
+                    <div class="brand-teal text-3xl mb-4">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-900">Online Student Placement System</h3>
+                    <p class="text-gray-700 mb-4">
+                        Student placement and recruitment platform built with MERN stack.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-green-100 text-green-700 text-xs rounded-full">MERN</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Command Line Tools Section -->
+    <section class="section-padding bg-gray-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold mb-4 text-gray-900">
+                    <i class="fas fa-terminal brand-teal mr-3"></i>Command Line Tools
+                </h2>
+                <div class="w-24 h-1 mx-auto" style="background: linear-gradient(to right, #4DA2A9, #6BB8C0);"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+                <!-- CLI Project 1 -->
+                <div class="bg-white p-6 rounded-lg shadow-md hover-lift border border-gray-200">
+                    <div class="brand-teal text-3xl mb-4">
+                        <i class="fas fa-music"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-900">Music Search</h3>
+                    <p class="text-gray-700 mb-4">
+                        Command-line music search application built with Python.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-blue-100 text-blue-700 text-xs rounded-full">Python</span>
+                        <a href="https://github.com/theirfanirfi/Python-Music-Search-CMD-app" target="_blank" class="px-3 py-1 bg-gray-100 text-gray-700 text-xs rounded-full hover:bg-gray-200">
+                            <i class="fab fa-github mr-1"></i>View Code
+                        </a>
+                    </div>
+                </div>
+
+                <!-- CLI Project 2 -->
+                <div class="bg-white p-6 rounded-lg shadow-md hover-lift border border-gray-200">
+                    <div class="brand-teal text-3xl mb-4">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-900">QueryingDB</h3>
+                    <p class="text-gray-700 mb-4">
+                        Database query automation tool built with Python.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-blue-100 text-blue-700 text-xs rounded-full">Python</span>
+                        <span class="px-3 py-1 bg-teal-100 text-teal-700 text-xs rounded-full">Automation</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section-padding gradient-bg text-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">Ready to Start Your Project?</h2>
+            <p class="text-xl mb-8 text-gray-100">Let's build something intelligent together.</p>
+            <a href="index.html#contact" class="bg-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition hover-lift inline-block brand-teal">
+                Get In Touch
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-8">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <a href="index.html" class="block mb-4">
+                        <img src="logoandcertificate/FullLogo.png" alt="QUEM Systems International Logo" class="h-12 object-contain filter brightness-0 invert">
+                    </a>
+                    <p class="text-sm">
+                        Turning Software Systems into Intelligent Systems — Where Engineering Meets AI.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="index.html" class="hover-brand-teal transition">Home</a></li>
+                        <li><a href="index.html#about" class="hover-brand-teal transition">About</a></li>
+                        <li><a href="index.html#services" class="hover-brand-teal transition">Services</a></li>
+                        <li><a href="projects.html" class="hover-brand-teal transition">Projects</a></li>
+                        <li><a href="team.html" class="hover-brand-teal transition">Team</a></li>
+                        <li><a href="index.html#contact" class="hover-brand-teal transition">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-4">Connect</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-2xl hover-brand-teal transition"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="text-2xl hover-brand-teal transition"><i class="fab fa-github"></i></a>
+                        <a href="#" class="text-2xl hover-brand-teal transition"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center text-sm">
+                <p>&copy; 2025 QUEM Systems International. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for mobile menu and smooth scrolling -->
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        if (mobileMenuBtn && mobileMenu) {
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href.startsWith('#') && href.length > 1) {
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                        // Close mobile menu if open
+                        if (mobileMenu) {
+                            mobileMenu.classList.add('hidden');
+                        }
+                    }
+                }
+            });
+        });
+        
+        // Calendly popup widget function
+        function openCalendly() {
+            // Replace 'your-username/meeting' with your actual Calendly URL
+            if (typeof Calendly !== 'undefined') {
+                Calendly.initPopupWidget({
+                    url: 'https://calendly.com/your-username/meeting'
+                });
+            }
+            return false;
+        }
+    </script>
+    
+    <!-- Calendly inline widget script -->
+    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+</body>
+</html>
